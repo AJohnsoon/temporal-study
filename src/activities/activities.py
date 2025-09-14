@@ -1,12 +1,13 @@
 import httpx
 import os
 from temporalio import activity
+from src.common.config import settings
 from dotenv import load_dotenv
 
 load_dotenv()
 
-URL = os.getenv('SERVICE_HOST')
-API_KEY = os.getenv('SERVICE_APIKEY')
+URL = settings.service_host
+API_KEY = settings.service_apikey
 
 @activity.defn(name="fetch_nasa_apod")
 async def fetch_nasa_apod() -> dict:

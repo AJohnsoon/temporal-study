@@ -19,8 +19,5 @@ async def main():
         task_queue=settings.temporal_task_queue,
     )
 
-    print("Resultado do workflow:", result)
-
-
 if __name__ == "__main__":
     asyncio.run(main())
