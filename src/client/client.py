@@ -9,7 +9,7 @@ async def main():
     client = await Client.connect(settings.temporal_host)
 
     event = {
-        "inputs": {"start_time": "20-09-07", "end_time": "2015-09-08"},
+        "inputs": {"start_time": "2025-09-01", "end_time": "2025-09-02"},
     }
 
     result = await client.execute_workflow(
